@@ -5,6 +5,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import javax.servlet.http.HttpServletResponse;
+
+import com.ruoyi.framework.aspectj.lang.annotation.DataSource;
+import com.ruoyi.framework.aspectj.lang.enums.DataSourceType;
 import org.apache.commons.io.IOUtils;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,6 +38,8 @@ import com.ruoyi.project.tool.gen.service.IGenTableService;
  * 
  * @author ruoyi
  */
+//若依不支持sqlserver
+@DataSource(value = DataSourceType.SLAVE10)
 @Controller
 @RequestMapping("/tool/gen")
 public class GenController extends BaseController

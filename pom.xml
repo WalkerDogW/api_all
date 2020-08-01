@@ -19,6 +19,7 @@
         <module>trace</module>
         <module>plc</module>
         <module>u8c</module>
+        <module>generator</module>
     </modules>
 
 </project>
